@@ -5,6 +5,8 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
+import DoctorsSection from "./DoctorsSection";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -39,10 +41,10 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
           className="flex items-center space-x-2 cursor-pointer"
         >
-          <FaClinicMedical className="text-3xl text-blue-500" />
+          <FaClinicMedical className="text-3xl text-red-500" />
           <Link
             to="/"
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent"
           >
             Sangam Hospital
           </Link>

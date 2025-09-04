@@ -82,7 +82,7 @@ const DoctorsSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-20 relative overflow-hidden">
+    <section id="doctors" className="bg-gradient-to-b from-blue-50 to-white py-20 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-20 left-10 w-16 h-16 bg-blue-100 rounded-full opacity-10 animate-float1"></div>

@@ -22,9 +22,9 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
-    <ScrollToTop />
+      <ScrollToTop />
       <div className="bg-[#f9fafe] min-h-screen">
-     
+
         <Navbar />
 
         {/* Routes */}
@@ -44,10 +44,8 @@ function App() {
               </>
             }
           />
-         <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-
-      
         <Footer />
       </div>
     </Router>

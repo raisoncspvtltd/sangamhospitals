@@ -77,13 +77,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaPhoneAlt className="mt-1 text-blue-300" />
                 <div>
-                  <p>Emergency: +91xxxxxx</p>
-                  <p>Appointments: +91 xxxxxxx</p>
+                  <p>Emergency: 108</p>
+                  <p>Appointments: +91 9044872872</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <FaEnvelope className="mt-1 text-blue-300" />
-                <span>contact@sangamhospital.com</span>
+                <span>sangamhospitals2025@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="mt-1 text-blue-300" />
