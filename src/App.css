@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+   .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-float1 {
+          animation: float 8s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float 10s ease-in-out infinite 2s;
+        }
+        .animate-float3 {
+          animation: float 12s ease-in-out infinite 1s;
+        }
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+          100% { transform: translateY(0px); }
+        }
+      
