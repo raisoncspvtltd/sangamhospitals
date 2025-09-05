@@ -5,66 +5,67 @@ import doctor1 from "../assets/doctor1.png";
 
 const doctors = [
   {
-    name: "Dr. Yusuf Khan",
+    name: "Dr. Rajeev Jha",
     specialty: "Cardiologist",
-    experience: "12 Years",
+    experience: "8 Years",
     rating: 4.9,
     image: doctor1,
-    education: "MD in Cardiology, AIIMS Delhi",
+    education: "MD (Cardiology) – AIIMS, New Delhi",
     languages: "English, Hindi, Urdu",
-    bio: "Renowned cardiologist with extensive experience in interventional procedures and preventive cardiology."
+    bio: "Experienced Interventional Cardiologist specializing in angioplasty, echocardiography, and preventive heart care."
   },
   {
-    name: "Dr. Devesh Sharma",
-    specialty: "Orthopedic Surgeon",
+    name: "Dr. Vivek Kumar Singh",
+    specialty: "Laparoscopic & General Surgeon",
     experience: "7 Years",
     rating: 4.8,
     image: doctor1,
-    education: "MS in Orthopedics, PGIMER Chandigarh",
+    education: "MS (General Surgery) – PGIMER, Chandigarh",
     languages: "English, Hindi, Punjabi",
-    bio: "Specializes in joint replacements and sports medicine with a focus on minimally invasive techniques."
+    bio: "Expert in laparoscopic (minimally invasive) surgeries including gallbladder, appendix, hernia repair, and gastrointestinal procedures."
   },
   {
-    name: "Dr. Meera Joshi",
-    specialty: "Neurologist",
-    experience: "9 Years",
+    name: "Dr. Prasiddhi",
+    specialty: "Cardiologist",
+    experience: "4 Years",
     rating: 4.7,
     image: doctor1,
-    education: "DM in Neurology, NIMHANS Bangalore",
+    education: "DM (Cardiology) – NIMHANS, Bangalore",
     languages: "English, Hindi, Marathi",
-    bio: "Expert in treating complex neurological disorders with a patient-centric approach."
+    bio: "Specializes in managing hypertension, coronary artery disease, heart failure, and preventive cardiology with a patient-centered approach."
   },
   {
-    name: "Dr. Priya Patel",
+    name: "Dr. Jitendra Kumar Singh",
     specialty: "Pediatrician",
     experience: "6 Years",
     rating: 4.9,
     image: doctor1,
-    education: "MD in Pediatrics, KEM Hospital Mumbai",
+    education: "MD (Pediatrics) – KEM Hospital, Mumbai",
     languages: "English, Hindi, Gujarati",
-    bio: "Passionate about child healthcare with special interest in neonatal care and vaccinations."
+    bio: "Dedicated to child health and wellness, with expertise in neonatal care, child growth monitoring, and immunization."
   },
   {
-    name: "Dr. Ramesh Iyer",
-    specialty: "Oncologist",
-    experience: "15 Years",
-    rating: 5.0,
-    image: doctor1,
-    education: "DM in Oncology, Tata Memorial Hospital",
-    languages: "English, Hindi, Tamil",
-    bio: "Pioneer in targeted cancer therapies with numerous successful treatment cases."
-  },
+  name: "Dr. Amit Singh",
+  specialty: "Homeopathy Specialist",
+  experience: "8 Years",
+  rating: 4.7,
+  image: doctor1,
+  education: "BHMS, National Institute of Homeopathy, Kolkata",
+  languages: "English, Hindi, Tamil",
+  bio: "Experienced in classical homeopathy treatments for chronic illnesses and holistic healing."
+},
   {
-    name: "Dr. Ananya Gupta",
-    specialty: "Dermatologist",
+    name: "Dr. Mohit Kumar Singh",
+    specialty: "Orthopedic Surgeon",
     experience: "5 Years",
     rating: 4.6,
     image: doctor1,
-    education: "MD in Dermatology, AIIMS Delhi",
+    education: "MS (Orthopedics) – AIIMS, New Delhi",
     languages: "English, Hindi, Bengali",
-    bio: "Specializes in cosmetic dermatology and skin cancer treatments with modern techniques."
+    bio: "Expert in bone and joint surgeries, fracture management, and sports injury treatment using minimally invasive techniques."
   },
 ];
+
 
 const DoctorsSection = () => {
   const [selectedDoctor, setSelectedDoctor] = useState(null);

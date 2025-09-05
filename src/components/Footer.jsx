@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  FaFacebookF, 
-  FaInstagram, 
-  FaPhoneAlt, 
-  FaMapMarkerAlt, 
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
   FaEnvelope,
   FaTwitter,
   FaLinkedin,
   FaClock,
-  FaAmbulance
+  FaAmbulance,
 } from "react-icons/fa";
 import { MdHealthAndSafety } from "react-icons/md";
 
@@ -20,9 +20,9 @@ const Footer = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const item = {
@@ -31,14 +31,14 @@ const Footer = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
-    <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white pt-16 pb-8 mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white pt-10 pb-5 mt-15">
+      <div className="max-w-7.5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={container}
           initial="hidden"
@@ -49,24 +49,31 @@ const Footer = () => {
           {/* Hospital Info */}
           <motion.div variants={item}>
             <div className="flex items-center mb-4">
-              <MdHealthAndSafety className="text-3xl text-blue-300 mr-2" />
+              <img
+                src="/sangam_orignal.png"
+                alt="Sangam Hospital Logo"
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-28 object-contain"
+              />
+
               <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-white bg-clip-text text-transparent">
-                Sangam Hospital
+                Sangam Super
+                <br />
+                <h4>Speciality Hospitals</h4>
               </h2>
             </div>
             <p className="text-blue-100 mb-4">
-              Providing compassionate care & world-class facilities for the people of Mankapur and nearby areas.
+              Sangam Superspecialty Hospital – delivering advanced healthcare,
+              24x7 emergency, and multi-specialty services with compassion and
+              care.
             </p>
             <div className="flex space-x-4">
-              <motion.a 
+              <motion.a
                 whileHover={{ y: -3 }}
-                href="#" 
+                href="/sangam_orignal.png"
                 className="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-full transition-colors"
-              >
-              </motion.a>
+              ></motion.a>
             </div>
           </motion.div>
-   
 
           {/* Contact Info */}
           <motion.div variants={item}>
@@ -77,17 +84,50 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaPhoneAlt className="mt-1 text-blue-300" />
                 <div>
-                  <p>Emergency: 108</p>
+                  <p>Emergency: +91 522 336 6782</p>
                   <p>Appointments: +91 9044872872</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <FaEnvelope className="mt-1 text-blue-300" />
-                <span>sangamhospitals2025@gmail.com</span>
+                <span>info@sangamhospitals.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="mt-1 text-blue-300" />
-                <span>123 Medical Road, Mankapur, Lucknow, Uttar Pradesh 226021</span>
+                <span>
+                  53/2 Awadhpuri Colony Near Sankat Mochan Gate Khargapur Gomti
+                  Nagar Lucknow
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <FaAmbulance className="mt-1 text-blue-300" />
+                <span>Ambulance: 108</span>
+              </li>
+            </ul>
+          </motion.div>
+          {/* Contact Info */}
+          <motion.div variants={item}>
+            <h3 className="text-xl font-semibold mb-4 border-b border-blue-800 pb-2">
+              Contact Us
+            </h3>
+            <ul className="space-y-4 text-blue-100">
+              <li className="flex items-start gap-3">
+                <FaPhoneAlt className="mt-1 text-blue-300" />
+                <div>
+                  <p>Emergency: +91 522 336 6782</p>
+                  <p>Appointments: +91 9044872872</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <FaEnvelope className="mt-1 text-blue-300" />
+                <span>info@sangamhospitals.com</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <FaMapMarkerAlt className="mt-1 text-blue-300" />
+                <span>
+                  53/2 Awadhpuri Colony Near Sankat Mochan Gate Khargapur Gomti
+                  Nagar Lucknow
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <FaAmbulance className="mt-1 text-blue-300" />
@@ -128,15 +168,16 @@ const Footer = () => {
         </motion.div>
 
         {/* Copyright */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-16 text-center text-blue-300 text-sm border-t border-blue-800 pt-6"
+          className="mt-16 text-center text-blue-300 text-sm border-t border-blue-800 pt-4"
         >
-          <p>© {new Date().getFullYear()} Sangam Hospital. All Rights Reserved.</p>
-
+          <p>
+            © {new Date().getFullYear()} Sangam Hospital. All Rights Reserved.
+          </p>
         </motion.div>
       </div>
     </footer>

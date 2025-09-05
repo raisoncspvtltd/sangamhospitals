@@ -184,7 +184,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800">Our Location</h4>
                     <p className="text-gray-600">
-                      123 Medical Road, Mankapur, Lucknow, Uttar Pradesh 226021
+                      53/2 Awadhpuri Colony Near Sankat Mochan Gate Khargapur Gomti Nagar 
                     </p>
                   </div>
                 </div>
@@ -195,8 +195,9 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Phone Numbers</h4>
-                    <p className="text-gray-600">Emergency: +91 xxxxxxxx</p>
-                    <p className="text-gray-600">Appointments: +91 xxxxxxxx</p>
+                    <p className="text-gray-600">Emergency: +91 522 336 6782</p>
+                    <p className="text-gray-600">Appointments: +91 90448 72872, +91 90448 72872</p>
+                    
                   </div>
                 </div>
 
@@ -213,9 +214,9 @@ const ContactSection = () => {
 
               <div className="mt-8 w-full h-[300px] rounded-lg overflow-hidden shadow-md">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1487.8406890562653!2d80.93963030977439!3d26.849695735093203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfda64938a6fb%3A0xfa5678ef634afb64!2sSibtainabad%20imambara%20Amjad%20Ali%20Shah%2C%20Hazratganj%2C%20Lucknow!5e1!3m2!1sen!2sin!4v1751803331046!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.972518871018!2d81.01649197443844!3d26.840826363177914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be36705161261%3A0x424bc8cb546c9c35!2sSangam%20Super%20Specialty%20Hospitals!5e0!3m2!1sen!2sin!4v1757070065169!5m2!1sen!2sin"
+                  width="600"
+                  height="450"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"

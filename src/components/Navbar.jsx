@@ -37,16 +37,19 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          
           className="flex items-center space-x-2 cursor-pointer"
         >
-          <FaClinicMedical className="text-3xl text-red-500" />
+          <img
+            src="/sangam_orignal.png"
+            alt="Sangam Hospital Logo"
+            className="w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-21 object-contain"
+          />
           <Link
             to="/"
             className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent"
           >
-            Sangam Hospital
+            Sangam Super <br/> Speciality Hospitals
           </Link>
         </motion.div>
 
