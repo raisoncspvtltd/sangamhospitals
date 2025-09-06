@@ -71,14 +71,23 @@ const Navbar = () => {
 
           <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
             <Link
-              to="/contact"
+              to="/about"
               smooth
               className="font-medium text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
             >
-              Contact Us
+              About Us
             </Link>
           </motion.div>
 
+          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              to="/services"
+              smooth
+              className="font-medium text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
+            >
+              Services
+            </Link>
+          </motion.div>
           <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
             <Link
               to="/#doctors"
@@ -86,6 +95,16 @@ const Navbar = () => {
               className="font-medium text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
             >
               Doctors
+            </Link>
+          </motion.div>
+
+          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              to="/contact"
+              smooth
+              className="font-medium text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
+            >
+              Contact Us
             </Link>
           </motion.div>
         </nav>

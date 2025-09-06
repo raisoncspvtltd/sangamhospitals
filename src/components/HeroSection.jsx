@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import doctorImg from "../assets/doctor.png";
 import { FaPhoneAlt, FaCalendarAlt } from "react-icons/fa";
 import hospitalBg from "../assets/hospital-bg.jpg";
+import CalendlyButton from "./CalendlyButton";
 
 const HeroSection = () => {
   const containerVariants = {
@@ -110,7 +111,7 @@ const HeroSection = () => {
             variants={itemVariants}
           >
             <motion.a
-              href="tel:+91xxxxxxxxx"
+              href="tel:+91 522 336 6782"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -120,13 +121,13 @@ const HeroSection = () => {
             </motion.a>
             
             <motion.a
-              href="#appointment"
+              
               className="bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full transition-all duration-300 inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FaCalendarAlt className="text-blue-600" />
-              Book Appointment
+              <CalendlyButton />
             </motion.a>
           </motion.div>
         </motion.div>
@@ -137,6 +138,7 @@ const HeroSection = () => {
           variants={imageVariants}
         >
           <div className="relative">
+
             <motion.img
               src={doctorImg}
               alt="Professional Doctor"

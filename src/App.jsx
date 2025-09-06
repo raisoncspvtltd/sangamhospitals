@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Components
 import Navbar from "./components/Navbar";
@@ -13,6 +14,9 @@ import SuperSpecialities from "./components/SuperSpecialities";
 import AppointmentCTA from "./components/AppointmentCTA";
 import ScrollToTop from "./components/ScrollToTop";
 import TechnologyAdvancements from "./components/TechnologyAdvancements";
+import ServicePage from "./components/ServicesPage";
+import AboutUs from "./components/AboutUs";
+import CalendlyButton from "./components/CalendlyButton";
 
 
 
@@ -45,6 +49,9 @@ function App() {
             }
           />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<ServicePage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/calendly-button" element={<CalendlyButton />} />
         </Routes>
         <Footer />
       </div>

@@ -108,7 +108,7 @@ const Footer = () => {
           {/* Contact Info */}
           <motion.div variants={item}>
             <h3 className="text-xl font-semibold mb-4 border-b border-blue-800 pb-2">
-              Contact Us
+              Usefull Links
             </h3>
             <ul className="space-y-4 text-blue-100">
               <li className="flex items-start gap-3">

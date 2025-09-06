@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaStar, FaClinicMedical, FaTimes, FaPhone, FaCalendarAlt } from "react-icons/fa";
 import doctor1 from "../assets/doctor1.png";
+import CalendlyButton from "./CalendlyButton";
 
 const doctors = [
   {
@@ -221,12 +222,10 @@ const DoctorsSection = () => {
                     </div>
 
                     <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                      <button className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors">
-                        <FaPhone /> Book Appointment
+                      <button className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-blue-600 text-white rounded-full font-medium transition-colors">
+                        <FaPhone /><CalendlyButton />
                       </button>
-                      <button className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors">
-                        <FaCalendarAlt /> View Availability
-                      </button>
+                      
                     </div>
                   </div>
                 </div>

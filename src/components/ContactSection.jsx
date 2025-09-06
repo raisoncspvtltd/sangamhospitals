@@ -9,6 +9,8 @@ import {
   FaPhone,
   FaPaperPlane,
 } from "react-icons/fa";
+import { db } from "../firebaseConfig"; // Adjust path as needed
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -32,9 +34,28 @@ const ContactSection = () => {
     e.preventDefault();
     setSubmitting(true);
 
-    // Simulate API delay (you can replace this with actual logic)
-    setTimeout(() => {
-      setSubmitting(false);
+    try {
+      // Validation
+      if (!formData.name || !formData.email || !formData.message) {
+        throw new Error("Please fill all required fields.");
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        throw new Error("Please enter a valid email address.");
+      }
+      
+      // Add to Firestore
+      await addDoc(collection(db, "contacts"), {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim() || "",
+        message: formData.message.trim(),
+        createdAt: serverTimestamp(),
+      });
+      
+      // Success message
       Swal.fire({
         icon: "success",
         title: "Message Sent!",
@@ -42,13 +63,24 @@ const ContactSection = () => {
         confirmButtonColor: "#3b82f6",
       });
 
+      // Reset form
       setFormData({
         name: "",
         email: "",
         message: "",
         phone: "",
       });
-    }, 2000);
+    } catch (err) {
+      console.error("Submission error:", err);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: err?.message || "Failed to submit. Please try again.",
+        confirmButtonColor: "#3b82f6",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -98,11 +130,12 @@ const ContactSection = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Full Name"
+                  placeholder="Full Name *"
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  disabled={submitting}
+                  className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-70"
                 />
               </div>
 
@@ -112,11 +145,12 @@ const ContactSection = () => {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Email Address"
+                    placeholder="Email Address *"
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    disabled={submitting}
+                    className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-70"
                   />
                 </div>
 
@@ -128,7 +162,8 @@ const ContactSection = () => {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    disabled={submitting}
+                    className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-70"
                   />
                 </div>
               </div>
@@ -137,12 +172,13 @@ const ContactSection = () => {
                 <FaComment className="absolute left-3 top-3 text-gray-400" />
                 <textarea
                   name="message"
-                  placeholder="Your Message"
+                  placeholder="Your Message *"
                   rows="5"
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  disabled={submitting}
+                  className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-70"
                 ></textarea>
               </div>
 
@@ -184,7 +220,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800">Our Location</h4>
                     <p className="text-gray-600">
-                      53/2 Awadhpuri Colony Near Sankat Mochan Gate Khargapur Gomti Nagar 
+                      53/2 Awadhpuri Colony Near Sankat Mochan Gate Khargapur Gomti Nagar Lucknow 226010
                     </p>
                   </div>
                 </div>
@@ -215,8 +251,8 @@ const ContactSection = () => {
               <div className="mt-8 w-full h-[300px] rounded-lg overflow-hidden shadow-md">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.972518871018!2d81.01649197443844!3d26.840826363177914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be36705161261%3A0x424bc8cb546c9c35!2sSangam%20Super%20Specialty%20Hospitals!5e0!3m2!1sen!2sin!4v1757070065169!5m2!1sen!2sin"
-                  width="600"
-                  height="450"
+                  width="100%"
+                  height="100%"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
