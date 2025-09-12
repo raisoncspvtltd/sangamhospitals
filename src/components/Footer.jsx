@@ -10,8 +10,8 @@ import {
   FaLinkedin,
   FaClock,
   FaAmbulance,
+  FaYoutube
 } from "react-icons/fa";
-import { MdHealthAndSafety } from "react-icons/md";
 
 const Footer = () => {
   const container = {
@@ -44,7 +44,7 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+          className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-10"
         >
           {/* Hospital Info */}
           <motion.div variants={item}>
@@ -54,11 +54,12 @@ const Footer = () => {
                 alt="Sangam Hospital Logo"
                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-28 object-contain"
               />
-
               <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-white bg-clip-text text-transparent">
                 Sangam Super
                 <br />
-                <h4>Speciality Hospitals</h4>
+                <span className="text-lg font-medium text-white">
+                  Speciality Hospitals
+                </span>
               </h2>
             </div>
             <p className="text-blue-100 mb-4">
@@ -69,70 +70,82 @@ const Footer = () => {
             <div className="flex space-x-4">
               <motion.a
                 whileHover={{ y: -3 }}
-                href="/sangam_orignal.png"
+                href="https://www.facebook.com/profile.php?id=61578293412381"
                 className="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-full transition-colors"
-              ></motion.a>
+              >
+                <FaFacebookF />
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -3 }}
+                href="https://www.instagram.com/sangamhospitals.lko/?hl=en"
+                className="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-full transition-colors"
+              >
+                <FaInstagram />
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -3 }}
+                href="https://x.com/sangamhospitals"
+                className="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-full transition-colors"
+              >
+                <FaTwitter />
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -3 }}
+                href="https://www.youtube.com/@SangamSuperSpecialtyHospitals"
+                className="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-full transition-colors"
+              >
+                <FaYoutube />
+              </motion.a>
             </div>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Useful Links */}
           <motion.div variants={item}>
             <h3 className="text-xl font-semibold mb-4 border-b border-blue-800 pb-2">
-              Contact Us
+              Useful Links
             </h3>
-            <ul className="space-y-4 text-blue-100">
-              <li className="flex items-start gap-3">
-                <FaPhoneAlt className="mt-1 text-blue-300" />
-                <div>
-                  <p>Emergency: +91 522 336 6782</p>
-                  <p>Appointments: +91 9044872872</p>
-                </div>
+            <ul className="space-y-3 text-blue-100">
+              <li>
+                <a
+                  href="/"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Home
+                </a>
               </li>
-              <li className="flex items-start gap-3">
-                <FaEnvelope className="mt-1 text-blue-300" />
-                <span>info@sangamhospitals.com</span>
+              <li>
+                <a
+                  href="/about"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  About Us
+                </a>
               </li>
-              <li className="flex items-start gap-3">
-                <FaMapMarkerAlt className="mt-1 text-blue-300" />
-                <span>
-                  53/2 Awadhpuri Colony Near Sankat Mochan Gate Khargapur Gomti
-                  Nagar Lucknow
-                </span>
+              <li>
+                <a
+                  href="/services"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Services
+                </a>
               </li>
-              <li className="flex items-start gap-3">
-                <FaAmbulance className="mt-1 text-blue-300" />
-                <span>Ambulance: 108</span>
+              <li>
+                <a
+                  href="#doctors"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Doctors
+                </a>
               </li>
-            </ul>
-          </motion.div>
-          {/* Contact Info */}
-          <motion.div variants={item}>
-            <h3 className="text-xl font-semibold mb-4 border-b border-blue-800 pb-2">
-              Usefull Links
-            </h3>
-            <ul className="space-y-4 text-blue-100">
-              <li className="flex items-start gap-3">
-                <FaPhoneAlt className="mt-1 text-blue-300" />
-                <div>
-                  <p>Emergency: +91 522 336 6782</p>
-                  <p>Appointments: +91 9044872872</p>
-                </div>
+              <li>
+                <a
+                  href="/contact"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Contact Us
+                </a>
               </li>
-              <li className="flex items-start gap-3">
-                <FaEnvelope className="mt-1 text-blue-300" />
-                <span>info@sangamhospitals.com</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <FaMapMarkerAlt className="mt-1 text-blue-300" />
-                <span>
-                  53/2 Awadhpuri Colony Near Sankat Mochan Gate Khargapur Gomti
-                  Nagar Lucknow
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <FaAmbulance className="mt-1 text-blue-300" />
-                <span>Ambulance: 108</span>
-              </li>
+              
             </ul>
           </motion.div>
 
@@ -165,6 +178,40 @@ const Footer = () => {
               </li>
             </ul>
           </motion.div>
+
+          {/* Contact Info */}
+          <motion.div variants={item}>
+            <h3 className="text-xl font-semibold mb-4 border-b border-blue-800 pb-2">
+              Contact Us
+            </h3>
+            <ul className="space-y-4 text-blue-100">
+              <li className="flex items-start gap-3">
+                <FaPhoneAlt className="mt-1 text-blue-300" />
+                <div>
+                  <p>Emergency: +91 522 336 6782</p>
+                  <p>Appointments: +91 9044872872</p>
+                </div>
+                
+              </li>
+              <li className="flex items-start gap-3">
+                <FaEnvelope className="mt-1 text-blue-300" />
+                <span>info@sangamhospitals.com</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <FaMapMarkerAlt className="mt-1 text-blue-300" />
+                <span>
+                  53/2 Awadhpuri Colony Sankat Mochan<br/> Gate Khargapur Gomti
+                  Nagar Lucknow
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <FaAmbulance className="mt-1 text-blue-300" />
+                <span>Ambulance: 108</span>
+              </li>
+            </ul>
+          </motion.div>
+
+          
         </motion.div>
 
         {/* Copyright */}
@@ -173,11 +220,12 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-16 text-center text-blue-300 text-sm border-t border-blue-800 pt-4"
+          className="mt-4 text-center text-blue-300 text-sm border-t border-blue-800 pt-4"
         >
           <p>
             © {new Date().getFullYear()} Sangam Hospital. All Rights Reserved.
           </p>
+          <p> <a href="/terms" className="hover:text-blue-400 transition-colors underline">Terms  Conditions </a> & <a href="/privacy-policy" className="hover:text-blue-400 transition-colors underline">Privacy Policy</a> </p>
         </motion.div>
       </div>
     </footer>

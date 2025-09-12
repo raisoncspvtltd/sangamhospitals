@@ -8,6 +8,14 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaPaperPlane,
+  FaFacebookF,
+  FaInstagram,
+  FaPhoneAlt,
+  FaTwitter,
+  FaLinkedin,
+  FaClock,
+  FaAmbulance,
+  FaYoutube
 } from "react-icons/fa";
 import { db } from "../firebaseConfig"; // Adjust path as needed
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
@@ -119,7 +127,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-white rounded-xl shadow-xl p-8"
+            className="bg-white flex-col rounded-xl shadow-xl p-8"
           >
             <h3 className="text-2xl font-bold text-blue-700 mb-6">
               Send Us a Message
@@ -137,6 +145,7 @@ const ContactSection = () => {
                   disabled={submitting}
                   className="w-full border border-gray-300 pl-10 pr-3 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-70"
                 />
+                
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -173,7 +182,7 @@ const ContactSection = () => {
                 <textarea
                   name="message"
                   placeholder="Your Message *"
-                  rows="5"
+                  rows="8"
                   required
                   value={formData.message}
                   onChange={handleChange}
@@ -197,6 +206,37 @@ const ContactSection = () => {
                 {submitting ? "Submitting..." : "Send Message"}
               </motion.button>
             </form>
+            <div className="flex justify-center mt-6 ml-4 space-x-4">
+                          <motion.a
+                            whileHover={{ y: -3 }}
+                            href="https://www.facebook.com/profile.php?id=61578293412381"
+                            className="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-full transition-colors"
+                          >
+                            <FaFacebookF />
+                          </motion.a>
+                          <motion.a
+                            whileHover={{ y: -3 }}
+                            href="https://www.instagram.com/sangamhospitals.lko/?hl=en"
+                            className="bg-pink-500 hover:bg-pink-500 text-white p-2 rounded-full transition-colors"
+                          >
+                            <FaInstagram />
+                          </motion.a>
+                          <motion.a
+                            whileHover={{ y: -3 }}
+                            href="https://x.com/sangamhospitals"
+                            className="bg-blue-500 hover:bg-blue-500 text-white p-2 rounded-full transition-colors"
+                          >
+                            <FaTwitter />
+                          </motion.a>
+                          <motion.a
+                            whileHover={{ y: -3 }}
+                            href="https://www.youtube.com/@SangamSuperSpecialtyHospitals"
+                            className="bg-red-600 hover:bg-red-500 text-white p-2 rounded-full transition-colors"
+                          >
+                            <FaYoutube />
+                          </motion.a>
+                        </div>
+            
           </motion.div>
 
           {/* Contact Info + Map */}

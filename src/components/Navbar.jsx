@@ -28,11 +28,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-2"
-          : "bg-white/80 backdrop-blur-sm py-3"
-      }`}
+      className={`bg-blue-400 fixed w-full z-50 transition-all duration-300 `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
@@ -135,7 +131,7 @@ const Navbar = () => {
                 <Link
                   to="/"
                   smooth
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpen(true)}
                   className={`block px-4 py-3 font-medium rounded-lg transition-all ${
                     isHome
                       ? "text-blue-600 bg-blue-50"
@@ -148,15 +144,25 @@ const Navbar = () => {
 
               <motion.div whileHover={{ x: 5 }} whileTap={{ scale: 0.98 }}>
                 <Link
-                  to="/contact"
+                  to="/about"
                   smooth
                   onClick={() => setIsOpen(false)}
                   className="block px-4 py-3 font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
                 >
-                  Contact Us
+                  About Us
                 </Link>
               </motion.div>
 
+              <motion.div whileHover={{ x: 5 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  to="/services"
+                  smooth
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
+                >
+                  Services
+                </Link>
+              </motion.div>
               <motion.div whileHover={{ x: 5 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   to="/#doctors"
@@ -165,6 +171,16 @@ const Navbar = () => {
                   className="block px-4 py-3 font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
                 >
                   Doctors
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ x: 5 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  to="/contact"
+                  smooth
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
+                >
+                  Contact Us
                 </Link>
               </motion.div>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import  { Link } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -17,42 +18,49 @@ import TechnologyAdvancements from "./components/TechnologyAdvancements";
 import ServicePage from "./components/ServicesPage";
 import AboutUs from "./components/AboutUs";
 import CalendlyButton from "./components/CalendlyButton";
-
-
-
-// Pages
 import Contact from "./pages/Contact";
+import TermsAndConditions from "./components/Terms";
+import PrivacyPolicy from "./components/Privacy";
+
+
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="bg-[#f9fafe] min-h-screen">
-
+      
+      <div className="bg-[#f9fafe] min-h-screen flex flex-col">
         <Navbar />
+        <div className="flex-grow">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection />
+                  <ServiceSection />
+                  <WhyChoose />
+                  <ExcellenceStats />
+                  <DoctorsSection />
+                  <AppointmentCTA />
+                  <TechnologyAdvancements />
+                  <SuperSpecialities />
+                </>
+              }
+            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<ServicePage />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/calendly-button" element={<CalendlyButton />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            
+          </Routes>
+          <Routes>
+          
+          </Routes>
+        </div>
 
-        {/* Routes */}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSection />
-                <ServiceSection />
-                <WhyChoose />
-                <ExcellenceStats />
-                <DoctorsSection />
-                <AppointmentCTA />
-                <TechnologyAdvancements />
-                <SuperSpecialities />
-              </>
-            }
-          />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<ServicePage />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/calendly-button" element={<CalendlyButton />} />
-        </Routes>
         <Footer />
       </div>
     </Router>

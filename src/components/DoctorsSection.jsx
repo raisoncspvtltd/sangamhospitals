@@ -1,68 +1,74 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaStar, FaClinicMedical, FaTimes, FaPhone, FaCalendarAlt } from "react-icons/fa";
-import doctor1 from "../assets/doctor1.png";
-import CalendlyButton from "./CalendlyButton";
+import doctor1 from "/rajeev.png";
+import doctor2 from "/vivek.png";
+import doctor3 from "/prasiddhi.png";
+import doctor4 from "/jitendra.png";
+import doctor5 from "/amit.png";
+import doctor6 from "/mohit.png";
+
+
 
 const doctors = [
   {
     name: "Dr. Rajeev Jha",
     specialty: "Cardiologist",
-    experience: "8 Years",
+    experience: "12+ Years",
     rating: 4.9,
     image: doctor1,
-    education: "MD (Cardiology) – AIIMS, New Delhi",
-    languages: "English, Hindi, Urdu",
+    education: "MD (Cardiology) – MBBS , Patna",
+    languages: "English, Hindi",
     bio: "Experienced Interventional Cardiologist specializing in angioplasty, echocardiography, and preventive heart care."
   },
   {
     name: "Dr. Vivek Kumar Singh",
     specialty: "Laparoscopic & General Surgeon",
-    experience: "7 Years",
+    experience: "10+ Years",
     rating: 4.8,
-    image: doctor1,
-    education: "MS (General Surgery) – PGIMER, Chandigarh",
-    languages: "English, Hindi, Punjabi",
+    image: doctor2,
+    education: "MBBS (General Surgery) – Dr. B.R. Ambedkar University, Agra",
+    languages: "English, Hindi",
     bio: "Expert in laparoscopic (minimally invasive) surgeries including gallbladder, appendix, hernia repair, and gastrointestinal procedures."
   },
   {
     name: "Dr. Prasiddhi",
     specialty: "Cardiologist",
-    experience: "4 Years",
+    experience: "2+ Years",
     rating: 4.7,
-    image: doctor1,
+    image: doctor3,
     education: "DM (Cardiology) – NIMHANS, Bangalore",
-    languages: "English, Hindi, Marathi",
+    languages: "English, Hindi",
     bio: "Specializes in managing hypertension, coronary artery disease, heart failure, and preventive cardiology with a patient-centered approach."
   },
   {
     name: "Dr. Jitendra Kumar Singh",
     specialty: "Pediatrician",
-    experience: "6 Years",
+    experience: "7+ Years",
     rating: 4.9,
-    image: doctor1,
-    education: "MD (Pediatrics) – KEM Hospital, Mumbai",
-    languages: "English, Hindi, Gujarati",
+    image: doctor4,
+    education: "MD (Pediatrics) – G.S.V.M. University, Kanpur",
+    languages: "English, Hindi",
     bio: "Dedicated to child health and wellness, with expertise in neonatal care, child growth monitoring, and immunization."
   },
   {
   name: "Dr. Amit Singh",
-  specialty: "Homeopathy Specialist",
-  experience: "8 Years",
+  specialty: "BHMS , Homeopathy Specialist",
+  experience: "6+ Years",
   rating: 4.7,
-  image: doctor1,
-  education: "BHMS, National Institute of Homeopathy, Kolkata",
-  languages: "English, Hindi, Tamil",
+  image: doctor5,
+  education: "BHMS, Barkatullah Vishwavidyalaya, Bhopal",
+  languages: "English, Hindi",
   bio: "Experienced in classical homeopathy treatments for chronic illnesses and holistic healing."
 },
   {
     name: "Dr. Mohit Kumar Singh",
     specialty: "Orthopedic Surgeon",
-    experience: "5 Years",
+    experience: "7+ Years",
     rating: 4.6,
-    image: doctor1,
-    education: "MS (Orthopedics) – AIIMS, New Delhi",
-    languages: "English, Hindi, Bengali",
+    image: doctor6,
+    education: "MS (Orthopedics) , Uttar Pradesh University of Medical Sciences, Saifai",
+    languages: "English, Hindi",
     bio: "Expert in bone and joint surgeries, fracture management, and sports injury treatment using minimally invasive techniques."
   },
 ];
@@ -172,7 +178,7 @@ const DoctorsSection = () => {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 50 }}
               transition={{ type: "spring", damping: 25 }}
-              className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-white rounded-xl  max-w-[75vh] max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative p-6">
@@ -183,7 +189,7 @@ const DoctorsSection = () => {
                   <FaTimes className="text-2xl" />
                 </button>
 
-                <div className="flex flex-col md:flex-row gap-6">
+                <div className=" flex md:flex-row gap-6">
                   <div className="flex-shrink-0">
                     <img
                       src={selectedDoctor.image}
@@ -221,12 +227,7 @@ const DoctorsSection = () => {
                       </div>
                     </div>
 
-                    <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                      <button className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-blue-600 text-white rounded-full font-medium transition-colors">
-                        <FaPhone /><CalendlyButton />
-                      </button>
-                      
-                    </div>
+                    
                   </div>
                 </div>
               </div>

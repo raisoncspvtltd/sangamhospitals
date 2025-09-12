@@ -44,7 +44,7 @@ const AboutUs = () => {
               variants={fadeIn}
               className="text-4xl md:text-5xl font-bold text-blue-800 mb-4"
             >
-              About <span className="text-blue-600">Sangam Hospital</span>
+              About <span className="text-blue-600">Sangam Hospitals</span>
             </motion.h1>
             <motion.div 
               variants={fadeIn}
@@ -54,7 +54,7 @@ const AboutUs = () => {
               variants={fadeIn}
               className="text-lg text-gray-600 max-w-3xl mx-auto"
             >
-              Providing exceptional healthcare with compassion and cutting-edge technology for over 15 years.
+              Providing exceptional healthcare with compassion and cutting-edge technology for over 1 years.
             </motion.p>
           </motion.div>
 
@@ -68,7 +68,7 @@ const AboutUs = () => {
               <div className="p-8 md:p-12">
                 <h2 className="text-2xl font-bold text-blue-800 mb-4">Our Story</h2>
                 <p className="text-gray-600 mb-4">
-                  Established in 2008, Sangam Superspecialty Hospital has been at the forefront of providing comprehensive healthcare services to the community of Lucknow and beyond. What started as a modest healthcare facility has now grown into a multi-specialty hospital equipped with state-of-the-art technology and staffed by experienced medical professionals.
+                  Established in 2025, Sangam Superspecialty Hospital has been at the forefront of providing comprehensive healthcare services to the community of Lucknow and beyond. What started as a modest healthcare facility has now grown into a multi-specialty hospital equipped with state-of-the-art technology and staffed by experienced medical professionals.
                 </p>
                 <p className="text-gray-600 mb-4">
                   Our name "Sangam" represents the confluence of cutting-edge technology, compassionate care, and medical expertise. We believe in treating not just the illness, but the whole person - with dignity, respect, and empathy.

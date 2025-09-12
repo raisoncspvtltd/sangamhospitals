@@ -5,11 +5,11 @@ import { useInView } from "react-intersection-observer";
 import { FaUserFriends, FaBed, FaAward, FaUserNurse, FaUserMd } from "react-icons/fa";
 
 const stats = [
-  { title: "Trusted Patients", value: 6000000, icon: <FaUserFriends className="text-blue-500" /> },
-  { title: "Hospital Beds", value: 800, icon: <FaBed className="text-blue-500" /> },
-  { title: "Years of Excellence", value: 25, icon: <FaAward className="text-blue-500" /> },
-  { title: "Medical Staff", value: 300, icon: <FaUserNurse className="text-blue-500" /> },
-  { title: "Super Specialists", value: 150, icon: <FaUserMd className="text-blue-500" /> },
+  { title: "Trusted Patients", value: 10000, icon: <FaUserFriends className="text-blue-500" /> },
+  { title: "Hospital Beds", value: 100, icon: <FaBed className="text-blue-500" /> },
+  { title: "Years of Excellence", value: 1, icon: <FaAward className="text-blue-500" /> },
+  { title: "Medical Staff", value: 50, icon: <FaUserNurse className="text-blue-500" /> },
+  { title: "Super Specialists", value: 10, icon: <FaUserMd className="text-blue-500" /> },
 ];
 
 const ExcellenceStats = () => {
@@ -90,11 +90,11 @@ const ExcellenceStats = () => {
                 <div className="text-4xl font-extrabold text-blue-600 mb-2">
                   {inView ? (
                     <CountUp
-                      end={itemData.title === "Trusted Patients" ? itemData.value / 100000 : itemData.value}
+                      end={itemData.title === "Trusted Patients" ? itemData.value / 10 : itemData.value}
                       duration={2.5}
                       delay={index * 0.2}
                       separator=","
-                      suffix={itemData.title === "Trusted Patients" ? " Lakh+" : "+"}
+                      suffix={itemData.title === "Trusted Patients" ? "+" : "+"}
                     />
                   ) : (
                     <>0+</>
