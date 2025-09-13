@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`bg-blue-400 fixed w-full z-50 transition-all duration-300 `}
+      className={`bg-white fixed w-full z-50 transition-all duration-300 `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
@@ -91,6 +91,16 @@ const Navbar = () => {
               className="font-medium text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
             >
               Doctors
+            </Link>
+          </motion.div>
+
+          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              to="/blog"
+              smooth
+              className="font-medium text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
+            >
+              Blog
             </Link>
           </motion.div>
 
