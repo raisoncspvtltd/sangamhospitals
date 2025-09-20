@@ -89,28 +89,7 @@ const ServicesPage = () => {
           </p>
         </AnimatedSection>
       </div>
-
-      {/* Hospital Info Card */}
-      <AnimatedSection delay={0.2}>
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-16 max-w-4xl mx-auto">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-blue-800 mb-2">SANGAM SUPERSPECIALTY HOSPITAL</h2>
-            <p className="text-gray-600 mb-1">
-              <i className="fas fa-map-marker-alt text-blue-500 mr-2"></i>
-              53/2, Avadhpuri Colony, Near Sankat Mochan Gate, Khargapur, Gomti Nagar, Lucknow-226010
-            </p>
-            <p className="text-gray-600 mb-1">
-              <i className="fas fa-phone-alt text-blue-500 mr-2"></i>
-              Emergency: +91 522 336 6782 | Appointments: +91 90448 72872
-            </p>
-            <p className="text-gray-600">
-              <i className="fas fa-envelope text-blue-500 mr-2"></i>
-              hospitals05@gmail.com
-            </p>
-          </div>
-        </div>
-      </AnimatedSection>
-
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Facilities Section */}
         <AnimatedSection delay={0.3}>

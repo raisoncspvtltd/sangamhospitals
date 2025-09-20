@@ -21,7 +21,7 @@ import CalendlyButton from "./components/CalendlyButton";
 import Contact from "./pages/Contact";
 import TermsAndConditions from "./components/Terms";
 import PrivacyPolicy from "./components/Privacy";
-import Blog from "./components/Blog";
+import Blogs from "./components/Blogs";
 import SinglePost from "./components/SinglePost";
 import BlogList from "./components/BlogList";
 
@@ -57,7 +57,7 @@ function App() {
             <Route path="/calendly-button" element={<CalendlyButton />} />
             <Route path="/terms" element={<TermsAndConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blogs" element={<Blogs />} />
             
             <Route path="/blog/:id" element={<SinglePost />} />
             <Route path="/blog-list" element={<BlogList />} />

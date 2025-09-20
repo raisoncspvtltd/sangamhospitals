@@ -6,7 +6,7 @@ const Blog = () => {
 
   useEffect(() => {
     fetch(
-      "https://sangamhospitals.com/blog/wp-json/wp/v2/posts?per_page=20&_embed"
+      "https://sangamhospitals.com/myblogs/wp-json/wp/v2/posts?per_page=20&_embed"
     )
       .then((res) => res.json())
       .then((data) => setPosts(data))

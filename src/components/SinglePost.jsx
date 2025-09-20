@@ -14,7 +14,7 @@ const SinglePost = () => {
 
   useEffect(() => {
     fetch(
-      `https://sangamhospitals.com/blog/wp-json/wp/v2/posts?slug=${id}&_embed`
+      `https://sangamhospitals.com/myblogs/wp-json/wp/v2/posts?slug=${id}&_embed`
     )
       .then((res) => res.json())
       .then((data) => setPost(data[0]))

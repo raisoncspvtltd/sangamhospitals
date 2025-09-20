@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaClinicMedical } from "react-icons/fa";
 import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-
-import DoctorsSection from "./DoctorsSection";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +93,7 @@ const Navbar = () => {
 
           <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
             <Link
-              to="/blog"
+              to="/blogs"
               smooth
               className="font-medium text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
             >

@@ -5,7 +5,7 @@ const BlogList = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("https://sangamhospitals.com/blog/wp-json/wp/v2/posts")
+    fetch("https://sangamhospitals.com/myblogs/wp-json/wp/v2/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error("Error fetching posts:", err));

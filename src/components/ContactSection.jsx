@@ -272,7 +272,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800">Phone Numbers</h4>
                     <p className="text-gray-600">Emergency: +91 522 336 6782</p>
-                    <p className="text-gray-600">Appointments: +91 90448 72872, +91 90448 72872</p>
+                    <p className="text-gray-600">Appointments: +91 90448 72872, +91 9956026260</p>
                     
                   </div>
                 </div>
@@ -283,7 +283,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Email Address</h4>
-                    <p className="text-gray-600">contact@sangamhospital.com</p>
+                    <p className="text-gray-600"><a href="mailto:info@sangamhospitals.com">info@sangamhospitals.com</a></p>
                   </div>
                 </div>
               </div>
